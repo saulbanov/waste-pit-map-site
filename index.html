@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  GitHub Pages copy of waste-pit-map/map/index.html. Built from the private repo
+  saulbanov/waste-pit-map; edit there, then re-copy. Locally: python3 -m http.server 8000
+  (must be served over HTTP, not opened as a file://, or the fetch() calls
+  for data/pits.geojson etc. will be blocked by the browser.)
+
+  Reads (relative to this file, zero write, zero logic beyond rendering):
+    data/pits.geojson          (properties now include bulk_loaded,
+                                          added by scripts/parse/add_bulk_loaded_property.py)
+    data/tx_counties.geojson
+    data/county.summary.csv    (now carries population, ag_market_value_usd,
+                                          ag_crop_sales_usd, ag_animal_sales_usd,
+                                          barnett_all, barnett_core, pits_per_100k_pop,
+                                          capacity_bbl_per_capita, pop_density_per_sq_mi,
+                                          ag_rank_tx — written by
+                                          scripts/parse/build_county_overlays.py)
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texas Authorized Pits — RRC Chapter 4 ORR</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; color: #222; }
+  #map { position: absolute; top: 0; bottom: 28px; left: 0; right: 0; }
+  #panel {
+    position: absolute; top: 10px; left: 10px; z-index: 1000;
+    background: rgba(255,255,255,0.96); border: 1px solid #999; border-radius: 4px;
+    padding: 10px 12px; width: 300px; max-height: calc(100% - 60px); overflow-y: auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+  #panel h1 { font-size: 14px; margin: 0 0 6px 0; }
+  #panel h2 { font-size: 12px; margin: 10px 0 4px 0; border-top: 1px solid #ddd; padding-top: 8px; }
+  #panel label { display: block; margin: 2px 0; cursor: pointer; }
+  #panel label input { margin-right: 5px; }
+  #count { font-weight: bold; margin: 6px 0; }
+  #legend { position: absolute; bottom: 34px; right: 10px; z-index: 1000; background: rgba(255,255,255,0.96); border: 1px solid #999; border-radius: 4px; padding: 8px 10px; }
+  #legend div { display: flex; align-items: center; margin: 2px 0; }
+  #legend span.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; border: 1px solid #333; }
+  #choropleth-legend { margin-top: 6px; font-size: 11px; }
+  #choropleth-legend div { display: flex; align-items: center; margin: 1px 0; }
+  #choropleth-legend span.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; border: 1px solid #999; flex-shrink: 0; }
+  #footer { position: absolute; bottom: 0; left: 0; right: 0; height: 28px; line-height: 28px; padding: 0 10px; background: #222; color: #ccc; font-size: 11px; z-index: 1000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #choropleth-controls { margin-top: 6px; }
+  select { width: 100%; font-size: 12px; }
+  .leaflet-popup-content { font-size: 12px; max-height: 300px; overflow-y: auto; }
+  .leaflet-popup-content table { border-collapse: collapse; }
+  .leaflet-popup-content td { padding: 1px 4px; vertical-align: top; }
+  .leaflet-popup-content td.k { color: #666; white-space: nowrap; }
+  .flag-on { color: #b00; font-weight: bold; }
+  .barnett-legend-note { font-size: 11px; color: #444; margin: 2px 0 0 0; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="panel">
+  <h1>Texas authorized pits — RRC Chapter 4 ORR</h1>
+  <div style="font-size:11px;color:#555;margin:0 0 6px 0">Future Heist · Saul Elbein and Greg Randall · 6,943 pits registered with the Railroad Commission of Texas, July 2025 to August 2026 · data and method: <code>saulbanov/waste-pit-dataset</code></div>
+  <div id="count">Loading…</div>
+
+  <h2>Schedule</h2>
+  <label><input type="checkbox" class="f-schedule" value="A" checked> Schedule A (drilling/workover)</label>
+  <label><input type="checkbox" class="f-schedule" value="B" checked> Schedule B (produced-water recycling)</label>
+
+  <h2>Status</h2>
+  <label><input type="checkbox" class="f-status" value="Active" checked> Active</label>
+  <label><input type="checkbox" class="f-status" value="Closed" checked> Closed</label>
+
+  <h2>Data quality</h2>
+  <label><input type="checkbox" id="exclude-bulk-loaded"> Exclude bulk-loaded (July 2026 migration) rows</label>
+
+  <h2>Hypothesis layers (each restricts to pits flagged)</h2>
+  <label><input type="checkbox" class="f-flag" value="flag_gw_le50_floor"> H1 operator reports groundwater ≤50 ft below pit floor: liner required by own number (842)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_gw_le10_floor"> H1 same, ≤10 ft (248)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_gw_within_50ft"> H1 (surface-basis reading, kept for comparison) groundwater within 50 ft of floor</label>
+  <label><input type="checkbox" class="f-flag" value="flag_gw_at_or_above_floor"> H1 groundwater at/above floor</label>
+  <label><input type="checkbox" class="f-flag" value="flag_district_office_org"> H3 district-office registrant (865 of 959 resolved to a real operator; see popup)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_closed_but_active"> H4 closed-but-Active</label>
+  <label><input type="checkbox" class="f-flag" value="flag_30day_overdue"> H4 30-day overdue</label>
+  <label><input type="checkbox" class="f-flag" value="flag_cw_backfill_overdue"> H4 completion/workover backfill overdue</label>
+  <label><input type="checkbox" class="f-flag" value="flag_county_mismatch"> H7 county mismatch</label>
+  <label><input type="checkbox" class="f-flag" value="flag_garbage_dims"> H7 garbage dimensions</label>
+  <label><input type="checkbox" class="f-flag" value="flag_stacked_coord"> H7 stacked coordinates</label>
+  <h2>H2 FEMA floodplain (NFHL 2025-09)</h2>
+  <label><input type="checkbox" class="f-flag" value="flag_in_sfha"> H2 inside a Special Flood Hazard Area, 100-yr floodplain (260)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_in_floodway"> H2 inside a regulatory floodway (4)</label>
+  <h2>Imagery check (NAIP 2024 + Esri; SFHA-Active and H1-strict lists only)</h2>
+  <label><input type="checkbox" class="f-flag" value="flag_img_pit_visible"> pit visible at the coordinate</label>
+  <label><input type="checkbox" class="f-flag" value="flag_img_visible_no_liner"> pit visible, no liner seen</label>
+  <label><input type="checkbox" class="f-flag" value="flag_img_no_activity"> no oilfield activity in the chip (coordinate error?)</label>
+  <h2>TWDB groundwater check (state wells within 3 mi)</h2>
+  <label><input type="checkbox" class="f-flag" value="flag_gw_placeholder"> reported 1 ft, state wells say deeper (placeholder)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_twdb_trigger_undeclared"> liner trigger undeclared, state wells say it applies (927)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_twdb_trigger_robust"> same, 3+ wells measured since 2015 (230)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_twdb_trigger_strict"> same, every nearby well within 50 ft of floor (76)</label>
+
+  <h2>County choropleth (H5)</h2>
+  <label><input type="checkbox" id="choropleth-toggle"> Show county choropleth</label>
+  <div id="choropleth-controls">
+    <select id="choropleth-metric">
+      <option value="n_pits">Pit count</option>
+      <option value="total_capacity_bbl">Total capacity (bbl)</option>
+      <option value="pits_per_100_sq_mi">Pits per 100 sq mi</option>
+      <option value="n_gw_within_50ft">Groundwater within 50 ft (count)</option>
+      <option value="n_gw_le50_floor">Pits reporting groundwater ≤50 ft below floor (own number)</option>
+      <option value="population">Population (2024 est.)</option>
+      <option value="pop_density_per_sq_mi">Population density (per sq mi)</option>
+      <option value="pits_per_100k_pop">Pits per 100k population</option>
+      <option value="ag_market_value_usd">Ag market value ($)</option>
+      <option value="ag_rank_tx">Ag market value rank (TX, 1=highest)</option>
+    </select>
+  </div>
+  <div id="choropleth-legend"></div>
+
+  <h2>Barnett Shale counties</h2>
+  <label><input type="checkbox" id="barnett-toggle"> Show Barnett counties outline</label>
+  <div class="barnett-legend-note">Heavy navy outline = core 4 (Denton, Johnson, Tarrant, Wise). Dashed blue outline = all 29 RRC Barnett counties.</div>
+</div>
+<div id="legend">
+  <div style="font-weight:bold; margin-bottom:4px;">Pit type</div>
+</div>
+<div id="footer">Loading provenance…</div>
+
+<script>
+const PIT_TYPE_COLORS = {
+  "CompletionWorkover": "#e6194B",
+  "Reserve": "#3cb44b",
+  "MakeupWater": "#4363d8",
+  "ProducedWaterRecycling": "#f58231",
+  "FreshMiningWater": "#911eb4",
+  "MudCirculation": "#42d4f4",
+  "WaterCondensate": "#f032e6",
+  "": "#999999"
+};
+function colorForType(t) {
+  return PIT_TYPE_COLORS[t] || "#666666";
+}
+
+const FLAG_LABELS = {
+  flag_county_mismatch: "H7 county mismatch",
+  flag_gw_le50_floor: "H1 groundwater ≤50 ft below pit floor by own number (liner required)",
+  flag_gw_le10_floor: "H1 groundwater ≤10 ft below pit floor by own number",
+  flag_gw_within_50ft: "H1 (surface-basis reading) groundwater within 50 ft of floor",
+  flag_gw_at_or_above_floor: "H1 groundwater at/above floor",
+  flag_gw_zero_or_missing: "groundwater depth zero/missing",
+  flag_district_office_org: "H3 district-office registrant",
+  flag_closed_but_active: "H4 closed-but-Active",
+  flag_negative_closure_lag: "negative closure lag",
+  flag_30day_overdue: "H4 30-day overdue",
+  flag_cw_backfill_overdue: "H4 completion/workover backfill overdue",
+  flag_garbage_dims: "H7 garbage dimensions",
+  flag_capacity_implausible: "capacity implausible",
+  flag_stacked_coord: "H7 stacked coordinates (n>=3)",
+  flag_in_sfha: "H2 inside FEMA Special Flood Hazard Area (100-yr floodplain)",
+  flag_in_floodway: "H2 inside regulatory floodway",
+  flag_img_pit_visible: "Imagery: pit visible at coordinate",
+  flag_img_visible_no_liner: "Imagery: pit visible, no liner seen",
+  flag_img_no_activity: "Imagery: no oilfield activity in chip",
+  flag_gw_placeholder: "TWDB: reported 1 ft, state wells deeper (placeholder)",
+  flag_twdb_trigger_undeclared: "TWDB: liner trigger undeclared, state wells say it applies",
+  flag_twdb_trigger_robust: "TWDB: same, 3+ wells since 2015",
+  flag_twdb_trigger_strict: "TWDB: same, every nearby well within 50 ft"
+};
+
+// 7-class quantile color ramp (light yellow -> dark red), shared by every choropleth metric.
+const CHORO_COLORS = [
+  "rgb(255,255,204)", "rgb(255,237,160)", "rgb(254,217,118)",
+  "rgb(254,178,76)", "rgb(253,141,60)", "rgb(240,59,32)", "rgb(189,0,38)"
+];
+const NO_DATA_COLOR = "#eeeeee";
+
+const METRIC_LABELS = {
+  n_pits: "Pit count",
+  total_capacity_bbl: "Total capacity (bbl)",
+  pits_per_100_sq_mi: "Pits per 100 sq mi",
+  n_gw_within_50ft: "Groundwater within 50 ft (count)",
+  population: "Population (2024 est.)",
+  pop_density_per_sq_mi: "Population density (per sq mi)",
+  pits_per_100k_pop: "Pits per 100k population",
+  ag_market_value_usd: "Ag market value ($)",
+  ag_rank_tx: "Ag market value rank (TX, 1=highest)"
+};
+
+const map = L.map('map', { zoomControl: true, preferCanvas: true }).setView([31.3, -100.8], 6);
+const baseLayer = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles courtesy of the <a href="https://www.usgs.gov/">U.S. Geological Survey</a>',
+  maxZoom: 16
+}).addTo(map);
+
+let pitsData = null;
+let countyGeo = null;
+let countyStats = {}; // geoid -> row
+let pitsLayer = L.layerGroup().addTo(map);
+let choroplethLayer = null;
+let barnettLayer = null;
+
+function logScaleRadius(cap) {
+  const c = (cap && cap > 0) ? cap : 1;
+  const r = 3 + Math.log10(c + 1) * 2.2;
+  return Math.max(3, Math.min(18, r));
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function popupHtml(props) {
+  const rows = [];
+  const order = ["registration_number","organization_name","county_name","county_from_coords",
+    "schedule","pit_type_primary","pit_types","status","effective_date","closure_date",
+    "capacity_bbl","depth_ft","groundwater_depth_ft","gw_minus_depth","bulk_loaded",
+    "twdb_n_wells_3mi","twdb_median_dtw_ft","twdb_max_dtw_ft","twdb_latest_year","twdb_verdict",
+    "fema_mapped","fld_zone","zone_subty","h3_operator","h3_operator_p5","h3_join",
+    "img_set","img_pit_visible","img_liner_visible","img_center_esri","img_notes"];
+  for (const k of order) {
+    rows.push(`<tr><td class="k">${escapeHtml(k)}</td><td>${escapeHtml(props[k] ?? "")}</td></tr>`);
+  }
+  const activeFlags = Object.keys(FLAG_LABELS).filter(k => props[k] == 1);
+  let flagHtml = activeFlags.length
+    ? '<ul style="margin:2px 0 0 16px; padding:0;">' + activeFlags.map(k => `<li class="flag-on">${escapeHtml(FLAG_LABELS[k])}</li>`).join('') + '</ul>'
+    : '<em>none</em>';
+  return `<table>${rows.join('')}</table><div style="margin-top:6px;"><b>Flags set:</b>${flagHtml}</div>`;
+}
+
+function currentFilters() {
+  const schedules = Array.from(document.querySelectorAll('.f-schedule:checked')).map(el => el.value);
+  const statuses = Array.from(document.querySelectorAll('.f-status:checked')).map(el => el.value);
+  const flags = Array.from(document.querySelectorAll('.f-flag:checked')).map(el => el.value);
+  const excludeBulk = document.getElementById('exclude-bulk-loaded').checked;
+  return { schedules, statuses, flags, excludeBulk };
+}
+
+function passesFilter(props, f) {
+  if (!f.schedules.includes(props.schedule)) return false;
+  if (!f.statuses.includes(props.status)) return false;
+  if (f.excludeBulk && props.bulk_loaded == 1) return false;
+  for (const flag of f.flags) {
+    if (props[flag] != 1) return false;
+  }
+  return true;
+}
+
+function renderPits() {
+  pitsLayer.clearLayers();
+  if (!pitsData) return;
+  const f = currentFilters();
+  let n = 0;
+  for (const feat of pitsData.features) {
+    const p = feat.properties;
+    if (!passesFilter(p, f)) continue;
+    n++;
+    const [lon, lat] = feat.geometry.coordinates;
+    const marker = L.circleMarker([lat, lon], {
+      radius: logScaleRadius(p.capacity_bbl),
+      color: '#222',
+      weight: 0.5,
+      fillColor: colorForType(p.pit_type_primary),
+      fillOpacity: 0.75
+    });
+    marker.bindPopup(popupHtml(p));
+    marker.addTo(pitsLayer);
+  }
+  document.getElementById('count').textContent = `${n.toLocaleString()} pits displayed (of ${pitsData.features.length.toLocaleString()} mapped)`;
+}
+
+function rawMetricValue(row, metric) {
+  if (!row) return null;
+  const raw = row[metric];
+  if (raw === undefined || raw === null || raw === '') return null;
+  const v = parseFloat(raw);
+  return isNaN(v) ? null : v;
+}
+
+// k+1 edges (k classes) via linear-interpolation quantiles over already-sorted values.
+function quantileBreaks(sortedVals, k) {
+  const edges = [sortedVals[0]];
+  for (let i = 1; i < k; i++) {
+    const p = i / k;
+    const idx = p * (sortedVals.length - 1);
+    const lo = Math.floor(idx), hi = Math.ceil(idx);
+    const frac = idx - lo;
+    edges.push(sortedVals[lo] + (sortedVals[hi] - sortedVals[lo]) * frac);
+  }
+  edges.push(sortedVals[sortedVals.length - 1]);
+  return edges;
+}
+
+function classIndexForValue(v, edges) {
+  if (v === null || v <= 0 || !edges) return -1;
+  let idx = 0;
+  for (let i = 1; i < edges.length - 1; i++) {
+    if (v >= edges[i]) idx = i;
+  }
+  return Math.min(idx, CHORO_COLORS.length - 1);
+}
+
+function fmtUsd(v) {
+  if (v === undefined || v === null || v === '') return 'n/a';
+  const n = Number(v);
+  if (isNaN(n)) return 'n/a';
+  return '$' + Math.round(n).toLocaleString();
+}
+
+function fmtMetric(metric, v) {
+  if (v === null || v === undefined || isNaN(v)) return 'n/a';
+  if (metric === 'ag_market_value_usd') return fmtUsd(v);
+  if (metric === 'ag_rank_tx') return '#' + Math.round(v);
+  if (metric === 'population') return Math.round(v).toLocaleString();
+  if (Math.abs(v - Math.round(v)) < 1e-9) return Math.round(v).toLocaleString();
+  return v.toFixed(2);
+}
+
+function buildChoroplethLegend(metric, edges) {
+  const el = document.getElementById('choropleth-legend');
+  el.innerHTML = '';
+  const title = document.createElement('div');
+  title.style.fontWeight = 'bold';
+  title.textContent = METRIC_LABELS[metric] || metric;
+  el.appendChild(title);
+  const zeroRow = document.createElement('div');
+  zeroRow.innerHTML = `<span class="swatch" style="background:${NO_DATA_COLOR}"></span>0 / no data`;
+  el.appendChild(zeroRow);
+  if (!edges) return;
+  for (let i = 0; i < CHORO_COLORS.length; i++) {
+    const lo = edges[i], hi = edges[i + 1];
+    const row = document.createElement('div');
+    row.innerHTML = `<span class="swatch" style="background:${CHORO_COLORS[i]}"></span>${fmtMetric(metric, lo)} – ${fmtMetric(metric, hi)}`;
+    el.appendChild(row);
+  }
+}
+
+function renderChoropleth() {
+  if (choroplethLayer) { map.removeLayer(choroplethLayer); choroplethLayer = null; }
+  const show = document.getElementById('choropleth-toggle').checked;
+  if (!show || !countyGeo) {
+    document.getElementById('choropleth-legend').innerHTML = '';
+    return;
+  }
+  const metric = document.getElementById('choropleth-metric').value;
+
+  const nonZero = [];
+  for (const geoid in countyStats) {
+    const v = rawMetricValue(countyStats[geoid], metric);
+    if (v !== null && v > 0) nonZero.push(v);
+  }
+  nonZero.sort((a, b) => a - b);
+  const edges = nonZero.length ? quantileBreaks(nonZero, CHORO_COLORS.length) : null;
+
+  choroplethLayer = L.geoJSON(countyGeo, {
+    style: feat => {
+      const row = countyStats[feat.properties.GEOID];
+      const v = row ? rawMetricValue(row, metric) : null;
+      const idx = classIndexForValue(v, edges);
+      return { fillColor: idx === -1 ? NO_DATA_COLOR : CHORO_COLORS[idx], fillOpacity: 0.7, color: '#555', weight: 1 };
+    },
+    onEachFeature: (feat, layer) => {
+      const row = countyStats[feat.properties.GEOID] || {};
+      const isCore = row.barnett_core == '1';
+      const isAll = row.barnett_all == '1';
+      const barnettTag = isCore ? 'Barnett core' : (isAll ? 'Barnett all' : '');
+      layer.bindTooltip(
+        `<b>${escapeHtml(feat.properties.NAME)} County</b><br>` +
+        `n_pits: ${escapeHtml(row.n_pits ?? 0)}<br>` +
+        `total_capacity_bbl: ${escapeHtml(row.total_capacity_bbl ?? 0)}<br>` +
+        `n_schedule_b: ${escapeHtml(row.n_schedule_b ?? 0)}<br>` +
+        `n_gw_within_50ft: ${escapeHtml(row.n_gw_within_50ft ?? 0)}<br>` +
+        `n_gw_at_or_above_floor: ${escapeHtml(row.n_gw_at_or_above_floor ?? 0)}<br>` +
+        `n_county_mismatch: ${escapeHtml(row.n_county_mismatch ?? 0)}<br>` +
+        `population: ${escapeHtml(row.population ? Number(row.population).toLocaleString() : 'n/a')}<br>` +
+        `pits per 100k pop: ${escapeHtml(row.pits_per_100k_pop || 'n/a')}<br>` +
+        `ag market value: ${escapeHtml(fmtUsd(row.ag_market_value_usd))}<br>` +
+        `ag rank (TX, 1=highest): ${escapeHtml(row.ag_rank_tx || 'n/a')}` +
+        (barnettTag ? `<br><b>${escapeHtml(barnettTag)}</b>` : ''),
+        { sticky: true }
+      );
+    }
+  }).addTo(map);
+  choroplethLayer.bringToBack();
+
+  buildChoroplethLegend(metric, edges);
+}
+
+function renderBarnett() {
+  if (barnettLayer) { map.removeLayer(barnettLayer); barnettLayer = null; }
+  const show = document.getElementById('barnett-toggle').checked;
+  if (!show || !countyGeo) return;
+  barnettLayer = L.geoJSON(countyGeo, {
+    filter: feat => {
+      const row = countyStats[feat.properties.GEOID];
+      return !!row && row.barnett_all == '1';
+    },
+    style: feat => {
+      const row = countyStats[feat.properties.GEOID] || {};
+      const isCore = row.barnett_core == '1';
+      return {
+        fill: false,
+        fillOpacity: 0,
+        color: isCore ? '#08306b' : '#2171b5',
+        weight: isCore ? 4 : 2,
+        dashArray: isCore ? null : '5,4'
+      };
+    }
+  }).addTo(map);
+  barnettLayer.bringToFront();
+}
+
+function buildLegend() {
+  const el = document.getElementById('legend');
+  for (const [type, color] of Object.entries(PIT_TYPE_COLORS)) {
+    if (type === "") continue;
+    const div = document.createElement('div');
+    div.innerHTML = `<span class="swatch" style="background:${color}"></span>${escapeHtml(type)}`;
+    el.appendChild(div);
+  }
+}
+
+function parseCsv(text) {
+  // Strip leading '#' provenance comment lines, then simple CSV parse
+  // (no embedded commas/quotes in this file's fields).
+  const lines = text.split(/\r?\n/).filter(l => l.length > 0 && !l.startsWith('#'));
+  const header = lines[0].split(',');
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const cells = lines[i].split(',');
+    const row = {};
+    header.forEach((h, idx) => row[h] = cells[idx]);
+    rows.push(row);
+  }
+  return rows;
+}
+
+async function init() {
+  const [pitsResp, countyGeoResp, countyCsvResp] = await Promise.all([
+    fetch('data/pits.geojson'),
+    fetch('data/tx_counties.geojson'),
+    fetch('data/county.summary.csv')
+  ]);
+  pitsData = await pitsResp.json();
+  countyGeo = await countyGeoResp.json();
+  const countyCsvText = await countyCsvResp.text();
+  const countyRows = parseCsv(countyCsvText);
+  countyRows.forEach(r => { countyStats[r.geoid] = r; });
+
+  document.getElementById('footer').textContent =
+    (pitsData.properties.provenance || '') +
+    ' — status and groundwater depth are operator-reported, not measured.';
+
+  buildLegend();
+  renderPits();
+
+  document.querySelectorAll('.f-schedule, .f-status, .f-flag').forEach(el => {
+    el.addEventListener('change', renderPits);
+  });
+  document.getElementById('exclude-bulk-loaded').addEventListener('change', renderPits);
+  document.getElementById('choropleth-toggle').addEventListener('change', renderChoropleth);
+  document.getElementById('choropleth-metric').addEventListener('change', renderChoropleth);
+  document.getElementById('barnett-toggle').addEventListener('change', renderBarnett);
+}
+
+init().catch(err => {
+  document.getElementById('count').textContent = 'Error loading data: ' + err.message;
+  console.error(err);
+});
+</script>
+</body>
+</html>
