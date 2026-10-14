@@ -1,0 +1,262 @@
+# source: RRC ORR export 2026-09-01 (asset RRC_ORR_AUTHORIZED_PITS_SCHED_A_B_2026-09-01, sha256 c05a347f9fdc429aae45212774ef8faa7c2094f51d874fd228d090b26a8c6806); overlays named in the columns; operator-reported coordinates and fields, not reviewed by RRC
+registration_number,organization_name,county_name,schedule,pit_type_primary,status,effective_date,capacity_bbl,latitude,longitude,fld_zone,zone_subty,flag_in_floodway,img_pit_visible,img_notes
+AP01 06396,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-26,45.0,34.122745,-98.644345,A,,0,no,Bare eroded soil/sandbar at center in river oxbow bend; small pond 140m W; no pit or pad visible.
+AP01 06394,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-26,45.0,33.890543,-98.814993,A,,0,no,Center in dense forest inside river horseshoe bend; small pad w/ equipment ~230m NW; no pit near center.
+AP01 06385,ENSIGN NATURAL RESOURCES II LLC,DE WITT,A,CompletionWorkover,Active,2026-08-25,1000000.0,29.312958,-97.327203,A,,0,yes,"Large diamond-oriented lined pit fills center of chip, black liner clearly visible, deep green liquid, small pump structure at south corner."
+AP01 06353,09 - Wichita Falls District Office,JACK,A,CompletionWorkover,Active,2026-07-17,100.0,33.136341,-98.414673,A,,0,no,"Brush pasture at center, no pit; small pond partial on W edge ~140m; small structures ~250m NE."
+AP01 06350,09 - Wichita Falls District Office,JACK,A,CompletionWorkover,Active,2026-07-17,100.0,33.137896,-98.418941,A,,0,no,"Brush pasture at center, no pit; pond + creek ~150m W; small round clearings ~180m E, possible well sites."
+AP01 06346,SOJOURNER DRILLING CORPORATION,JONES,A,MudCirculation,Active,2026-06-10,50.0,32.552289,-100.081982,A,,0,unclear,"Small bare disturbed patch near center in cropland, likely reclaimed mud pit pad; no standing liquid visible."
+AP01 06289,"Paloma Operating, LLC",WILSON,A,MudCirculation,Active,2026-08-20,1995.0,29.348635,-98.103709,AE,,0,no,"Mowed pasture/brush at center, cropland N, farm buildings ~600m E; no pit, no water visible."
+AP01 06288,"Paloma Operating, LLC",WILSON,A,Reserve,Active,2026-08-20,1995.0,29.348635,-98.103709,AE,,0,no,"Same coordinate/scene as prior row (Paloma pair); mowed pasture/brush at center, no pit, no water visible."
+AP01 06264,"MOENNING, VERNIE R, ESTATE OF",WICHITA,A,CompletionWorkover,Active,2026-07-09,100.0,34.013737,-98.88057,A,,0,unclear,"Brush/mesquite pasture at center; disturbed pad-like clearings ~120m E w/ possible small pit/tank; creek NW, pond S."
+AP01 06194,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-18,45.0,34.15098,-98.638652,A,,0,no,Brush/road junction at center; bare pad ~250m N; small vehicle/structure ~120m S; no water visible.
+AP01 06166,Railroad Commission of Texas,ERATH,A,CompletionWorkover,Active,2026-06-25,50.0,32.431906,-98.309592,A,,0,no,"Pasture/cropland at center, no pit; pond ~200m E; tree-lined creek W; no oil/gas equipment visible."
+AP01 06135,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.959818,-98.732458,A,,0,no,"Brush/mesquite at center, no pit; RR+road top; faint creek at S edge; no oil/gas equipment visible."
+AP01 06134,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.898991,-98.941197,A,,0,no,"Bare pad/road junction at center, no lined pit; small equipment dot on pad; drainage channel/wash E."
+AP01 06124,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.890543,-98.814993,A,,0,no,Same coordinate/scene as row AP01 06394; center in dense forest inside river horseshoe bend; small pad w/ equipment ~230m NW.
+AP01 06123,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.893845,-98.824357,A,,0,yes,"Reddish/brown pond ~75m NE of center, likely the pit; river+trees along S edge; brush pasture surrounds."
+AP01 06121,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.910815,-98.807475,A,,0,unclear,"Clear well pad at center w/ dark circular feature ~70m NW, possibly small pit; power lines cross; erosion channels both sides."
+AP01 06117,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.89958,-98.907999,A,,0,no,Brush pasture at center; road junction w/ dark equipment ~115m NE; small pond ~220m SW; no pit at center.
+AP01 06110,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Active,2026-08-17,45.0,33.898689,-98.877985,A,,0,no,Grass pasture at center; small tank battery ~120m E; road junction; no pit or water visible near center.
+AP01 06102,"Waggoner Operating, L.L.C.",WICHITA,A,CompletionWorkover,Active,2026-07-02,100.0,34.045577,-98.92915,A,,0,unclear,"Brush near highway; small dark patch ~100m N could be old pit, not confirmed; residential buildings/cemetery-like structure to east."
+AP01 06064,"MASH OILFIELD SERVICES, LP",PALO PINTO,A,CompletionWorkover-30,Active,2026-08-13,85.0,32.92791,-98.558242,A,,0,no,"Open pasture at center, no pit; two ponds ~150-160m S/N; no oil/gas equipment visible in chip."
+AP01 06061,"MASH OILFIELD SERVICES, LP",YOUNG,A,CompletionWorkover-30,Active,2026-08-13,85.0,33.003561,-98.662945,A,,0,yes,"Round tan/brown earthen pit ~76m S of center, likely unlined mud/reserve pit; brush pasture around; farm structures N."
+AP01 06058,"MASH OILFIELD SERVICES, LP",YOUNG,A,CompletionWorkover-30,Active,2026-08-13,85.0,32.981928,-98.533655,A,,0,no,"Dense brush/cedar cover at center, no pit; oval pond ~150m NE; road diagonal; no oil/gas equipment visible."
+AP01 06055,"MASH OILFIELD SERVICES, LP",YOUNG,A,CompletionWorkover-30,Active,2026-08-13,85.0,33.189943,-98.558275,A,,0,yes,"Dark round pond/pit ~35m SW of center, likely lined pit w/ liquid; small clearing/pad adjacent; cedar brush surrounds."
+AP01 06051,"MASH OILFIELD SERVICES, LP",YOUNG,A,CompletionWorkover-30,Active,2026-08-13,85.0,32.960767,-98.724577,A,,0,unclear,"Small bare/reddish disturbed patch near center in dense brush, likely well pad; no clear pit shape; no water visible."
+AP01 06035,MARATHON OIL EF LLC,GOLIAD,A,MakeupWater,Active,2026-07-01,280000.0,28.764943,-97.55618,A,,0,no,"Dense cedar/oak canopy at center, no large MakeupWater reservoir visible despite 280k bbl capacity; coordinate may be imprecise or pit not yet built (2024 NAIP)."
+AP01 06031,MARATHON OIL EF LLC,ATASCOSA,A,MakeupWater,Active,2026-07-01,265000.0,28.775051,-98.143633,A,,0,no,"Dense mesquite/oak motte at center, no large MakeupWater reservoir visible despite 265k bbl capacity; farmland around; small pond ~230m SE."
+AP01 06030,MARATHON OIL EF LLC,GOLIAD,A,MakeupWater,Active,2026-07-01,170000.0,28.777578,-97.49394,A,,0,no,"Scattered oak motte pasture at center, no MakeupWater reservoir visible despite 170k bbl capacity; farm house w/ pool ~200m S."
+AP01 06018,MARATHON OIL EF LLC,KARNES,A,MakeupWater,Active,2026-07-01,285000.0,28.807903,-97.953933,A,,0,no,"Large bare/disced field at center, no MakeupWater reservoir visible despite 285k bbl capacity; small tank/wellhead cluster ~350m N; creek SE corner."
+AP01 06016,MARATHON OIL EF LLC,KARNES,A,MakeupWater,Active,2026-07-01,355000.0,28.815485,-97.71654,A,,0,no,"Dense cedar brush at center, no MakeupWater reservoir visible despite 355k bbl capacity; small vehicle/equipment ~170m SE; trail network."
+AP01 06000,MARATHON OIL EF LLC,KARNES,A,MakeupWater,Active,2026-07-01,647000.0,28.822906,-97.875769,A,,0,yes,Two large lined MakeupWater pits dead at center; NAIP shows both DRY/empty (tan bottom); Esri shows main pit FULL of green liquid -- images disagree on fill state.
+AP01 05929,BURLINGTON RESOURCES O & G CO LP,KARNES,A,MakeupWater,Active,2026-07-01,385000.0,28.9475,-97.827778,A,,0,yes,Reported coordinate ~180m NW of actual lined pit (offset); pit full of dark green liquid; paved road at dead center.
+AP01 05928,BURLINGTON RESOURCES O & G CO LP,KARNES,A,MakeupWater,Active,2026-07-01,60000.0,28.870556,-97.875278,A,,0,no,Road intersection near center in dense brush; no MakeupWater reservoir visible despite 60k bbl capacity; small property ~350m SE.
+AP01 05904,BURLINGTON RESOURCES O & G CO LP,KARNES,A,MakeupWater,Active,2026-07-01,450000.0,28.925183,-97.795003,A,,0,yes,"Large lined MakeupWater pit dead center, filled w/ liquid in both images; substation/tank structures N; secondary pond ~130m SW."
+AP01 05871,BURLINGTON RESOURCES O & G CO LP,KARNES,A,MakeupWater,Active,2026-07-01,600000.0,28.931944,-97.94388,A,,0,no,"Dense river-bottom forest at center, no 600k bbl MakeupWater reservoir visible; river channel through chip; farmland N/S."
+AP01 05841,BURLINGTON RESOURCES O & G CO LP,DE WITT,A,MakeupWater,Active,2026-07-01,1000000.0,29.311111,-97.326388,A,,0,yes,"Large lined MakeupWater pit ~70m N of center, filled w/ green liquid in both images; access road/apron at center; creek visible SE in Esri."
+AP01 05770,L.C.S. PRODUCTION COMPANY,TAYLOR,A,Reserve,Active,2026-08-11,8000.0,32.167831,-100.08213,A,,0,no,"Brush/mesquite pasture at center, no pit visible; small farmstead ~150m SW; no water, no clear oil/gas equipment."
+AP01 05767,L.C.S. PRODUCTION COMPANY,TAYLOR,A,Reserve,Active,2026-08-11,8000.0,32.16292,-100.083364,A,,0,no,"Brush/mesquite pasture at center, no pit visible; small farmstead ~140m SW; no water, no clear oil/gas equipment."
+AP01 05662,LAMAR ENERGY,MONTAGUE,A,CompletionWorkover,Active,2026-08-07,4.0,33.96124,-97.703394,A,,0,no,"Grassy river-bottom terrain at center on sandy river bank; no pit visible (4 bbl cap, likely undetectable); river channel N, water extent differs between images."
+AP01 05652,"TEXLAND PETROLEUM, L.P.",LUBBOCK,A,CompletionWorkover,Closed,2026-06-19,176.0,33.60971,-101.79351,AE,,0,,
+AP01 05624,"MASH OILFIELD SERVICES, LP",JACK,A,CompletionWorkover-30,Active,2026-08-05,85.0,33.040684,-98.259043,A,,0,no,"Dense creek-corridor forest at center, no pit; disturbed reddish patch in field ~200m NW; small pond ~250m E."
+AP01 05572,"ST. CAJETAN OIL COMPANY, LLC",WICHITA,A,CompletionWorkover,Active,2025-12-01,25.0,33.986644,-98.831128,A,,0,no,"Semi-arid brush at center w/ dry wash/gully network; no pit visible (25 bbl cap, trivial); small structure ~280m E; pond visible S in Esri."
+AP01 05508,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2026-06-12,45.0,33.861085,-98.839708,A,,0,no,"Paved road at dead center; houses/farmstead on E side; open pasture W; no pit, no water, no oil/gas equipment visible."
+AP01 05502,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2026-06-05,45.0,33.890801,-98.877559,A,,0,no,"Dense cedar/mesquite brush at center, no pit; cropland NW; creek visible NE corner; small structure ~230m NW."
+AP01 05434,SM ENERGY COMPANY,WEBB,A,FreshMiningWater,Active,2026-06-10,432000.0,28.006701,-99.869664,A,,0,yes,Multiple lined FreshMiningWater ponds visible; dark pond ~30m SW of center is closest; two more ponds NE and SW in chip; small structures S.
+AP01 05433,SM ENERGY COMPANY,WEBB,A,FreshMiningWater,Active,2026-06-10,147000.0,28.103405,-99.999055,A,,0,yes,Single dark lined FreshMiningWater pond ~100m NW of center; tree-ringed; road NE; consistent between images.
+AP01 05432,SM ENERGY COMPANY,WEBB,A,FreshMiningWater,Active,2026-06-10,169000.0,28.110814,-99.927688,A,,0,yes,"Pond w/ pale/white sediment patch in NAIP (partly dry?) vs fully dark/wet in Esri; ~60m E of center; tree-ringed, road access."
+AP01 05430,SM ENERGY COMPANY,WEBB,A,FreshMiningWater,Active,2026-06-10,356000.0,28.164782,-99.897859,A,,0,yes,"Large lined FreshMiningWater pit dead center, filled w/ green liquid in both; secondary elongated pond ~100m N; access road+small structures at pit edge."
+AP01 05429,SM ENERGY COMPANY,WEBB,A,FreshMiningWater,Active,2026-06-10,297000.0,28.083966,-99.917242,A,,0,yes,Pond dead center covered in white/pale material in NAIP (foam/salt crust/reflective cover?); Esri shows normal teal water -- images disagree on surface state.
+AP01 05427,SM ENERGY COMPANY,WEBB,A,FreshMiningWater,Active,2026-06-10,407000.0,28.164802,-99.897429,A,,0,yes,Same facility as AP01 05430 (adjacent coordinate); large lined pit dead center filled w/ green liquid; secondary elongated pond N.
+AP01 05422,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover-30,Closed,2026-07-27,120.0,33.805208,-98.696216,A,,0,,
+AP01 05420,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover-30,Closed,2026-07-27,120.0,33.803653,-98.696436,A,,0,,
+AP01 05419,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover-30,Closed,2026-07-27,120.0,33.804538,-98.696471,A,,0,,
+AP01 05370,"COMSTOCK OIL & GAS, LLC",RUSK,A,Reserve,Active,2026-07-07,25000.0,32.373779,-94.496825,A,,0,unclear,"Large cleared/disturbed patch at center in piney woods, possible reclaimed reserve pit; more bare in NAIP, more regrown/green in Esri; river runs along N edge."
+AP01 05275,"Dara Operating Company, LLC",WICHITA,A,CompletionWorkover,Active,2026-06-10,100.0,34.058937,-98.900557,A,,0,no,"road bisects center; bare/eroded pale ground E of road, no clear pit shape"
+AP01 05270,SOJOURNER DRILLING CORPORATION,JONES,A,CompletionWorkover,Closed,2026-06-10,50.0,32.552289,-100.081982,A,,0,unclear,"small circular soil-disturbance patch essentially at coordinate, likely old pit scar; no liner, water, or equipment visible, dry"
+AP01 05236,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Closed,2026-07-17,45.0,33.893845,-98.824357,A,,0,,
+AP01 05224,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover-30,Closed,2026-07-17,45.0,33.898689,-98.877985,A,,0,,
+AP01 05202,09 - Wichita Falls District Office,YOUNG,A,CompletionWorkover-30,Closed,2026-07-12,120.0,33.000512,-98.497908,A,,0,,
+AP01 02509,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2025-12-17,120.0,33.688998,-98.587831,A,,0,,
+AP01 02508,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2025-12-17,120.0,33.689441,-98.585311,A,,0,,
+AP01 02505,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2025-12-17,120.0,33.698815,-98.590171,A,,0,,
+AP01 02595,09 - Wichita Falls District Office,YOUNG,A,CompletionWorkover,Closed,2026-01-16,120.0,32.997426,-98.689403,A,,0,,
+AP01 02596,09 - Wichita Falls District Office,YOUNG,A,CompletionWorkover,Closed,2026-01-16,120.0,32.998256,-98.689404,A,,0,,
+AP01 04480,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-10,120.0,33.444441,-98.611211,A,,0,,
+AP01 04479,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-10,120.0,33.445205,-98.611298,A,,0,,
+AP01 04486,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-13,120.0,33.446055,-98.611308,A,,0,,
+AP01 04484,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-13,120.0,33.443141,-98.612205,A,,0,,
+AP01 04482,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-10,120.0,33.445146,-98.612195,A,,0,,
+AP01 04474,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-10,120.0,33.443809,-98.612857,A,,0,,
+AP01 04491,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-13,120.0,33.445278,-98.618978,A,,0,,
+AP01 04490,09 - Wichita Falls District Office,ARCHER,A,CompletionWorkover,Closed,2026-04-13,120.0,33.443825,-98.619775,A,,0,,
+AP01 04556,09 - Wichita Falls District Office,WICHITA,A,CompletionWorkover,Closed,2026-04-27,100.0,33.941093,-98.825606,A,,0,,
+AP01 04559,09 - Wichita Falls District Office,WICHITA,A,CompletionWorkover,Closed,2026-04-27,100.0,33.941883,-98.825401,A,,0,,
+AP01 04557,09 - Wichita Falls District Office,WICHITA,A,CompletionWorkover,Closed,2026-04-27,100.0,33.940473,-98.825028,A,,0,,
+AP01 04566,09 - Wichita Falls District Office,WICHITA,A,CompletionWorkover,Closed,2026-04-27,100.0,33.942491,-98.826545,A,,0,,
+AP01 04576,09 - Wichita Falls District Office,WICHITA,A,CompletionWorkover,Closed,2026-04-27,100.0,33.940786,-98.825935,A,,0,,
+AP01 01372,WB MULLIN OPERATING LLC,YOUNG,A,CompletionWorkover,Active,2025-09-25,70.0,33.331622,-98.535342,A,,0,no,"dense cedar/juniper brush at center; no pit, no pad, no water visible"
+AP01 02621,"STAR PRODUCTION, INC.",JONES,A,CompletionWorkover,Closed,2026-01-20,70.0,32.625694,-100.126993,A,,0,,
+AP01 00112,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-16,45.0,33.899034,-98.889039,A,,0,,
+AP01 00111,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-16,45.0,33.896462,-98.906186,A,,0,,
+AP01 00110,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-16,45.0,33.894097,-98.905862,A,,0,,
+AP01 00109,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-16,45.0,33.898911,-98.88678,A,,0,,
+AP01 00116,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-16,45.0,33.897407,-98.88527,A,,0,,
+AP01 00115,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-16,45.0,33.890912,-98.877902,A,,0,,
+AP01 00094,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-13,45.0,33.87845,-98.77429,A,,0,,
+AP01 00093,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-07-09,45.0,33.895114,-98.89438,A,,0,no,plowed reddish cropfield at center; small tree clump nearby; no pit or infrastructure
+AP01 00092,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-15,45.0,34.00628,-98.88388,A,,0,,
+AP01 00097,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-07-16,45.0,33.93413,-98.8161,A,,0,unclear,disturbed pad/road junction at center; small pond ~150m SW; river wash SE corner
+AP01 00411,R2Q OPERATING LLC,WICHITA,A,Reserve,Active,2025-06-21,4300.0,33.902038,-98.938677,A,,0,no,"plowed field at center, no visible pit; farm pond ~100m NW; stream SE corner"
+AP01 00410,R2Q OPERATING LLC,WICHITA,A,MudCirculation,Active,2025-06-21,800.0,33.902038,-98.938677,A,,0,no,"identical coords/imagery to AP01 00411; plowed field, no visible pit; pond nearby"
+AP01 00409,R2Q OPERATING LLC,WICHITA,A,MudCirculation,Active,2025-06-21,800.0,33.902038,-98.938677,A,,0,no,"identical coords/imagery to AP01 00411; plowed field, no visible pit; pond nearby"
+AP01 00414,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-07-16,45.0,33.889022,-98.813382,A,,0,no,Center in dense river-bottom forest along creek bend; no pit visible; small structure ~170m E
+AP01 00413,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-07-16,45.0,33.892551,-98.814262,A,,0,unclear,small cleared patch at road end near center; pumpjack ~150m SW; Wichita River close by
+AP01 00419,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-07-21,45.0,34.14942,-98.647791,A,,0,yes,Large pale bare depression ~40m from center resembling dried/shallow pond; slight water tint in esri only; river+tanks-like structures ~200m NW
+AP01 00430,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-22,45.0,33.895812,-98.826077,A,,0,,
+AP01 00429,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-22,45.0,33.896892,-98.828933,A,,0,,
+AP01 00428,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-22,45.0,33.896029,-98.826688,A,,0,,
+AP01 00438,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-07-30,45.0,33.867284,-98.833387,A,,0,no,"small pad w/ structures at center, no distinct pit; Wichita River ~150m E"
+AP01 00442,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-25,45.0,33.922555,-98.672844,AE,FLOODWAY,1,,
+AP01 00865,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-08-18,45.0,33.8987,-98.90257,A,,0,yes,reddish disturbed ground at center in NAIP; Esri shows oval green-tinted pond at same spot; creek in frame
+AP01 00864,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-08-18,45.0,33.898689,-98.877985,A,,0,,
+AP01 01196,7B - Abilene District Office,PALO PINTO,A,CompletionWorkover,Closed,2025-09-12,50.0,32.918677,-98.233773,A,,0,,
+AP01 02884,7B - Abilene District Office,STEPHENS,A,CompletionWorkover,Active,2025-12-15,295.0,32.582297,-98.863731,A,,0,no,open pasture w/ scattered tree clumps at center; no pit or oil/gas infrastructure; registrant is RRC district office
+AP01 02882,7B - Abilene District Office,STEPHENS,A,CompletionWorkover,Active,2025-12-15,295.0,32.584405,-98.86191,A,,0,no,brushy pasture near road at center; two stock ponds ~100-150m away; no pad visible
+AP01 01008,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-08-19,45.0,33.930846,-98.817411,A,,0,no,road junction/disturbed ground at center; round ringed pit-like feature ~150m N; creek + pond in chip
+AP01 01004,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-09-02,45.0,33.910491,-98.646761,AE,,0,no,"Small well pad w/ equipment ~28m from center, no defined pit shape; river bend curves through NE; farmland surrounds"
+AP01 01135,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-09-04,45.0,33.878301,-98.776099,A,,0,,
+AP01 01134,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-09-04,45.0,33.877873,-98.778014,A,,0,,
+AP01 00784,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-08-05,45.0,33.891355,-98.816832,A,,0,,
+AP01 00782,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-08-05,45.0,33.901229,-98.902326,A,,0,,
+AP01 01145,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-09-11,45.0,33.901285,-98.911784,A,,0,unclear,"cropland w/ dark reddish spot ~60m from center, ambiguous small pit or bare disturbed soil; creek NW"
+AP01 00785,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-08-05,45.0,33.901285,-98.911784,A,,0,,
+AP01 01390,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-09-16,45.0,33.897598,-98.800059,A,,0,yes,"small round pit at end of access road, at center; river/creek ~100m N"
+AP01 00791,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-08-11,45.0,33.901229,-98.902326,A,,0,,
+AP01 01804,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-10-13,45.0,33.856684,-98.825312,A,,0,no,"Center on large fan-arranged storage/inventory yard (rows of stored material/equipment) beside highway; drainage channel E; no pit visible; note this row's fetch initially 403'd, succeeded on retry"
+AP01 02066,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-10-23,45.0,33.879122,-98.811333,A,,0,no,"large pale patch below center is a river point-bar/sandbar, not a pit; small pad ~100m NW; river adjacent"
+AP01 02425,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-11-24,45.0,33.89315,-98.879288,A,,0,no,plowed field at center; two tank-like structures ~120m NW; drainage along E edge
+AP01 02424,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-10-09,45.0,33.907725,-98.731536,A,,0,no,"plowed field at center; river ~100m W; farm buildings SE, no oil/gas infrastructure visible"
+AP01 02478,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-12-09,45.0,33.874666,-98.828645,A,,0,,
+AP01 02416,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-10-31,45.0,33.867377,-98.833433,A,,0,no,small pad w/ equipment ~50m from center; Wichita River ~100-150m E
+AP01 02415,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-11-13,45.0,33.898689,-98.877985,A,,0,no,open pasture at center; tank battery-like structure ~170m E; minor pad scar ~80m S
+AP01 02134,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2025-10-13,45.0,33.856684,-98.825312,A,,0,no,center is a cemetery (grave rows) beside a road; houses across street; no pit or oil/gas infrastructure in chip
+AP01 02487,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-12-09,45.0,33.886587,-98.809145,A,,0,,
+AP01 02483,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-12-08,45.0,33.89729,-98.810268,A,,0,,
+AP01 03328,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-01-22,45.0,33.871859,-98.828135,A,,0,,
+AP01 03338,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-01-13,45.0,33.873932,-98.725993,A,,0,,
+AP01 03335,R2Q OPERATING LLC,GREGG,A,CompletionWorkover,Closed,2026-02-05,45.0,32.541913,-94.841352,AE,FLOODWAY,1,,
+AP01 03819,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-10,45.0,33.89315,-98.879288,A,,0,,
+AP01 03787,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-10,45.0,33.853636,-98.851509,A,,0,,
+AP01 03786,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-10,45.0,33.856684,-98.825312,A,,0,,
+AP01 03500,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-02-16,45.0,33.899034,-98.88904,A,,0,,
+AP01 03497,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-02-16,45.0,33.874666,-98.828645,A,,0,,
+AP01 03827,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-16,45.0,33.9019,-98.9378,A,,0,,
+AP01 03501,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-02-16,45.0,33.899034,-98.88904,A,,0,,
+AP01 03516,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-02-16,45.0,33.873932,-98.725993,A,,0,,
+AP01 04425,7B - Abilene District Office,JONES,A,CompletionWorkover,Closed,2026-03-07,50.0,32.59116,-99.95406,A,,0,,
+AP01 04058,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-23,45.0,33.87167,-98.841029,A,,0,,
+AP01 04065,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-30,45.0,33.893845,-98.824357,A,,0,,
+AP01 04064,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-03-30,45.0,33.881363,-98.816629,A,,0,,
+AP01 04468,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-04-08,45.0,33.89315,-98.879288,A,,0,,
+AP01 04465,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-04-06,45.0,33.869668,-98.84104,A,,0,,
+AP01 04677,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-04-28,45.0,33.881363,-98.816629,A,,0,,
+AP01 04472,R2Q OPERATING LLC,WICHITA,A,MudCirculation,Active,2026-04-08,801.0,33.903,-98.936,A,,0,no,dense brush/drainage at center; small pond ~100m NE; bare pad visible ~200m W in chip
+AP01 04471,R2Q OPERATING LLC,WICHITA,A,Reserve,Active,2026-04-08,4328.0,33.903,-98.936,A,,0,no,"identical coords/imagery to AP01 04472; brush/drainage at center, no pit visible"
+AP01 04470,R2Q OPERATING LLC,WICHITA,A,MudCirculation,Active,2026-04-08,801.0,33.903,-98.936,A,,0,no,"identical coords/imagery to AP01 04472; brush/drainage at center, no pit visible"
+AP01 04469,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-04-06,45.0,34.15098,-98.638652,A,,0,,
+AP01 04755,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-05-04,45.0,33.898911,-98.886781,A,,0,,
+AP01 04615,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2026-04-14,45.0,33.898149,-98.87562,A,,0,,
+AP01 05027,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2026-05-13,45.0,33.893845,-98.824357,A,,0,no,disturbed track area at center; reddish-tinted pond ~75m NE; river ~150m S
+AP01 05022,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2026-05-14,45.0,33.898911,-98.886781,A,,0,no,dense brush at center; small residence ~30m away; creek in NE part of chip; no pit visible
+AP01 05021,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Active,2026-05-15,45.0,33.898689,-98.877985,A,,0,no,"identical coords/imagery to AP01 02415; open pasture at center, tank battery-like structure ~170m E"
+AP01 00100,R2Q OPERATING LLC,WICHITA,A,CompletionWorkover,Closed,2025-07-14,45.0,33.89362,-98.64182,AE,,0,,
+AP01 01435,OGDEN RESOURCES CORPORATION,TAYLOR,A,CompletionWorkover,Active,2025-08-01,100.0,32.393924,-99.632482,A,,0,no,"residential ranch compound at center; large dark rectangular plot (arena/garden, not a lined pit); stock pond ~180m NW; no oil/gas infrastructure visible; possible mislocated coordinate"
+AP01 03894,"KILLAM OIL CO., LTD.",WEBB,A,Reserve,Active,2026-03-14,10686.0,27.750206,-99.638269,A,,0,no,Dense brush at center; well pad w/ vehicles ~100-150m E; small pond at chip edge ~360m SE (esri only); highway N
+AP01 03366,INTERNATIONAL WESTERN OIL CORP,PALO PINTO,A,CompletionWorkover,Closed,2026-01-08,100.0,32.661062,-98.547403,A,,0,,
+AP01 04593,ENHANCED ENERGY PARTNERS CORP,WHARTON,A,Reserve,Closed,2026-04-27,2600.0,29.58475,-96.065673,AE,,0,,
+AP01 04594,ENHANCED ENERGY PARTNERS CORP,BAYLOR,A,Reserve,Closed,2026-05-01,2600.0,29.59515,-96.065338,AE,,0,,
+AP01 01463,"WALSH & WATTS, INC.",HOWARD,A,CompletionWorkover,Active,2025-10-02,100.0,32.258034,-101.194123,A,,0,no,Dense brush/mesquite at center w/ red dirt trails; no pit visible; muddy pond ~280m NW; small equipment near S edge
+AP01 03898,"WADE, JIM",YOUNG,A,CompletionWorkover,Closed,2026-03-06,40.0,33.33776,-98.736841,AE,,0,,
+AP01 03318,"TEXLAND PETROLEUM, L.P.",ECTOR,A,CompletionWorkover,Closed,2026-02-04,177.0,32.05506,-102.587,A,,0,no,"Bare white/tan caliche pad at center, no pit or liquid; vegetated drainage swale in upper frame ~150m away."
+AP01 03317,"TEXLAND PETROLEUM, L.P.",ECTOR,A,CompletionWorkover,Closed,2026-02-04,177.0,32.050366,-102.56022,A,,0,,
+AP01 03484,"TEXLAND PETROLEUM, L.P.",ECTOR,A,CompletionWorkover,Closed,2026-02-13,176.0,32.047125,-102.569385,A,,0,no,Center on disturbed brush clearing near facility edge; building/tank complex ~100m away; no pit visible.
+AP01 04597,"TEXLAND PETROLEUM, L.P.",LUBBOCK,A,CompletionWorkover,Active,2026-04-21,180.0,33.65585,-101.94634,A,,0,no,small square tank pad at center; caliche quarry ~150m SW; no distinct excavated pit shape; NAIP frame is dark/low-contrast
+AP01 04743,"TEXLAND PETROLEUM, L.P.",LUBBOCK,A,CompletionWorkover,Active,2026-04-29,176.0,33.669928,-101.937769,A,,0,unclear,Bare pad ~35m from center sits within large dark playa-lake depression (round wetland amid dryland crop fields)
+AP01 00024,"TEXLAND PETROLEUM, L.P.",ECTOR,A,CompletionWorkover,Active,2025-07-08,178.0,32.050818,-102.563909,A,,0,no,Center at bare caliche road-junction pad amid scattered small well pads; small pond ~150m S; Permian well-field pattern
+AP01 00455,"SOUTHWEST GAS SYSTEMS, INC.",BROWN,A,CompletionWorkover,Closed,2025-07-28,96.0,32.024897,-99.079505,A,,0,,
+AP01 00452,"SOUTHWEST GAS SYSTEMS, INC.",BROWN,A,CompletionWorkover,Closed,2025-07-28,53.0,32.010408,-99.019094,A,,0,,
+AP01 01121,"CONTINENTAL RESOURCES, INC.",ECTOR,A,MakeupWater,Active,2025-09-03,57945.0,32.007112,-102.302992,A,,0,yes,"NAIP (2024) shows sparse brush pad only, small dark spots far smaller than reported 57,945 bbl capacity; Esri (newer) shows built green lined pond + full tank battery at center -- site developed between capture dates"
+AP01 02689,"CONTINENTAL RESOURCES, INC.",ECTOR,A,Reserve,Active,2026-01-19,50420.0,32.00461,-102.304657,A,,0,no,"sparse brush at center in both; large tank battery + green pond visible ~250-300m NE, outside 60m radius"
+AP01 02688,"CONTINENTAL RESOURCES, INC.",ECTOR,A,MakeupWater,Active,2026-01-19,53490.0,32.003973,-102.30523,A,,0,no,Dense mesquite brush at center between two well pads/tank batteries (~100-150m away each); bare triangular clearing near center in esri only
+AP01 03404,"CONTINENTAL RESOURCES, INC.",ECTOR,A,MakeupWater,Active,2026-01-08,53490.0,31.960837,-102.36028,AE,,0,no,"Dense mesquite brush at center; small square pond ~220m NE; bare pad w/ equipment ~230m W; highway at E edge; fetch initially 403'd, succeeded on retry"
+AP01 03346,"CONTINENTAL RESOURCES, INC.",ECTOR,A,MakeupWater,Active,2026-01-08,53490.0,31.960837,-102.36028,AE,,0,unclear,NAIP (2024) shows bare brush w/ small pond ~200m N; Esri shows massive white tank/lined-impoundment structure now covering most of the chip at center -- built after NAIP capture
+AP01 00381,"CHOLLA PETROLEUM, INC.",ARCHER,A,Reserve,Active,2025-07-21,100.0,33.792678,-98.599255,A,,0,no,dense brush at center; farm pond ~170m NE; no pit or oil/gas infrastructure visible; farmhouse ~100m NW
+AP01 05121,"Caturus Energy, LLC",WEBB,A,MakeupWater,Active,2026-05-05,1583000.0,27.930234,-99.823657,A,,0,yes,"huge lined green makeup-water pond fills center, consistent with reported 1.58M bbl capacity; second darker pond adjacent NE"
+AP01 05126,"Caturus Energy, LLC",WEBB,A,MakeupWater,Active,2026-05-06,316000.0,28.00568,-99.766922,A,,0,yes,"long lined green makeup-water pond at center, consistent with reported 316,000 bbl capacity; bare pad above pond"
+AP01 01750,"WG Oil, LLC",WICHITA,A,CompletionWorkover,Active,2025-10-08,45.0,33.863875,-98.701965,A,,0,no,trees at center; bare disturbed pad w/ pumpjack ~100m S; ponds ~250m E and W
+AP01 01341,SOJOURNER DRILLING CORPORATION,TAYLOR,A,CompletionWorkover,Closed,2025-09-17,106.0,32.48953,-100.055314,A,,0,,
+AP01 04926,"S.B. STREET OPERATING, INC.",ARCHER,A,CompletionWorkover,Active,2026-05-12,85.0,33.567756,-98.565789,A,,0,yes,large dark disturbed rectangular pit/pad fills center; two catch ponds ~120-150m SE
+AP01 03731,"ROSE CITY RESOURCES, LLC",GREGG,A,Reserve,Active,2026-03-01,21193.0,32.50742,-94.965417,A,,0,unclear,center falls on paved highway; pasture both sides; small round dark patch (pond or shadow) ~70m E; no oil/gas infrastructure visible; likely mislocated coordinate
+AP01 03218,RIDGE OIL COMPANY,YOUNG,A,CompletionWorkover,Closed,2026-01-23,85.0,33.211196,-98.623023,A,,0,,
+AP01 02661,"MOMENTUM OPERATING CO., INC.",JONES,A,CompletionWorkover,Closed,2026-01-22,94.0,32.77956,-99.66988,A,,0,,
+AP01 01387,"SUTHERLAND ENERGY CO., LLC",YOUNG,A,CompletionWorkover,Closed,2025-09-15,87.0,33.125069,-98.652592,A,,0,,
+AP01 04764,"ST. CAJETAN OIL COMPANY, LLC",WICHITA,A,CompletionWorkover,Active,2025-12-01,25.0,33.986644,-98.831128,A,,0,unclear,"Center on brush/road fork; bare irregular patch ~50m NW, no clean pit edges; esri obscured by cloud/haze"
+AP01 05014,"SKY RESOURCES, INC.",YOUNG,A,CompletionWorkover,Active,2026-04-01,105.0,32.970645,-98.772302,A,,0,no,"Small well pad w/ equipment ~30-40m from center, no defined pit; river bend below; muddy wet patch ~200m N (esri)"
+AP01 02897,"KEIRUS, INC.",WICHITA,A,CompletionWorkover,Closed,2025-10-10,100.0,33.886831,-98.819329,A,,0,,
+AP01 00497,"JAID ENERGY, LLC",YOUNG,A,CompletionWorkover,Closed,2025-07-26,85.0,33.038093,-98.457962,A,,0,,
+AP01 02085,"HIGHPEAK ENERGY HOLDINGS, LLC",HOWARD,A,CompletionWorkover,Active,2025-10-20,91.0,32.280953,-101.287066,A,,0,unclear,White pad/possible liner ~35m S of center in creek-bottom trees; esri hazy color-cast but same feature visible
+AP01 02335,"HIGHPEAK ENERGY HOLDINGS, LLC",HOWARD,A,CompletionWorkover,Active,2025-10-01,91.0,32.280953,-101.287066,A,,0,unclear,"Identical coords/chips to AP01 02085; white pad ~35m S of center; esri hazy, no clean pit outline"
+AP01 01521,"QUAIL WELL SERVICE, INC.",TAYLOR,A,Reserve,Active,2025-09-22,1246.0,32.08562,-99.637031,A,,0,no,Center at edge of tire-track clearing off trail hub; no rectangular pit edges either chip; creek nearby
+AP01 01926,"CRAMPTON, FREDDIE",ARCHER,A,CompletionWorkover,Active,2025-10-20,135.0,33.767157,-98.68543,A,,0,unclear,"Well pad at center w/ tank cluster to N; mottled disturbed ground may be reserve-pit remnant, edges unclear"
+AP01 01662,Magnetar Operating LLC,BRAZOS,A,Reserve,Active,2025-09-18,25000.0,30.369778,-96.147389,AE,,0,no,Center sits on farm road beside Brazos River; no pit visible
+AP01 04852,"MIDCON SERVICES, LLC",WICHITA,A,CompletionWorkover,Closed,2026-05-11,80.0,34.144667,-98.657174,A,,0,,
+AP01 03152,"MASH OILFIELD SERVICES, LP",ARCHER,A,CompletionWorkover,Closed,2025-12-31,85.0,33.596525,-98.852731,A,,0,,
+AP01 00347,"JAY MANAGEMENT COMPANY, LLC",LIBERTY,A,CompletionWorkover,Closed,2025-07-18,25.0,29.946204,-94.976045,AE,,0,,
+AP01 00930,HILLTOP PETROLEUM LLC,PALO PINTO,A,CompletionWorkover,Closed,2025-08-22,85.0,32.868328,-98.10448,A,,0,,
+AP01 04345,"EOG RESOURCES, INC.",WALKER,A,MakeupWater,Active,2025-07-01,82000.0,30.869,-95.7119,A,,0,yes,"Rectangular lined MakeupWater pond ~30-50m from center w/ algae; equipment pad adjacent SW; forest surrounds, highway N"
+AP01 04283,"EOG RESOURCES, INC.",DE WITT,A,MakeupWater,Active,2025-07-01,500421.0,29.332415,-97.310096,A,,0,yes,Large lined makeup-water impoundment fills center; river bend ~40m S; liner and green fluid clear both images
+AP01 04325,"EOG RESOURCES, INC.",WEBB,A,MakeupWater,Active,2025-07-01,1947774.0,27.79694,-99.444167,A,,0,no,Center on N-S pipeline/road right-of-way through dense brush; small pond ~250m SW; no large reservoir visible despite ~1.9M bbl registered capacity
+AP01 04331,"EOG RESOURCES, INC.",WEBB,A,MakeupWater,Active,2025-07-01,1152678.0,27.939167,-99.265556,A,,0,no,"Bare well pad at center; large lined makeup-water pit ~215m NE, outside 60m radius; no stream in chip"
+AP01 02916,Deep Blue Operating I LLC,ECTOR,A,MakeupWater,Active,2025-07-01,70000.0,31.765839,-102.340906,A,,0,yes,Lined makeup-water pit centered in frame; small tank battery/pad ~40m NE; no natural water in chip
+AP01 02209,"BWS-BRILEY WELL SERVICES, LTD.",ECTOR,A,CompletionWorkover,Active,2025-11-17,200.0,31.95604,-102.51924,A,,0,no,"Ranch farmstead at center w/ small dark ring ~85m away (possible stock tank/cistern) near buildings; olive pond at W edge; no clear oilfield equipment; fetch initially 403'd, succeeded on retry"
+AP01 02292,"BWS-BRILEY WELL SERVICES, LTD.",PALO PINTO,A,CompletionWorkover,Active,2025-12-29,200.0,32.941459,-98.21935,A,,0,no,Center under dense canopy near trail scar; no pit visible; river ~80m NW; white tank/structure far E edge
+AP01 02620,"BWS-BRILEY WELL SERVICES, LTD.",STEPHENS,A,CompletionWorkover,Active,2026-01-16,200.0,32.5512,-98.64457,A,,0,no,Center at trail crossing under canopy; round pond ~170m SW likely stock tank; no O&G equipment visible
+AP01 03684,"BWS-BRILEY WELL SERVICES, LTD.",TAYLOR,A,CompletionWorkover,Active,2026-02-27,200.0,32.125654,-99.746843,A,,0,no,"Narrow causeway/pad across reservoir; naip shows dry lakebed, esri fully flooded; lined pit ~270m SW"
+AP01 01476,"ANTLE OPERATING, INC.",PALO PINTO,A,CompletionWorkover,Closed,2025-09-29,85.0,32.983553,-98.242792,A,,0,,
+AP01 02352,"B.O.L.D. OIL AND GAS, LLC",YOUNG,A,CompletionWorkover,Active,2025-11-26,990.0,33.268675,-98.630278,A,,0,no,Dense trees at center; well pad w/ tanks ~220m NW; farm pond ~265m SE
+AP01 01497,"WILLOWBEND INVESTMENTS, INC.",ARCHER,A,MudCirculation,Closed,2025-10-01,1277.0,33.41916,-98.618641,A,,0,,
+AP01 04176,"WILLOWBEND INVESTMENTS, INC.",ARCHER,A,CompletionWorkover,Closed,2026-04-13,100.0,33.794212,-98.426493,A,,0,,
+AP01 01496,"WILLOWBEND INVESTMENTS, INC.",ARCHER,A,Reserve,Closed,2025-10-01,8928.0,33.41916,-98.618641,A,,0,,
+AP01 02029,RUSK PRODUCTION INC.,WICHITA,A,CompletionWorkover,Active,2025-10-23,150.0,33.925084,-98.670576,AE,FLOODWAY,1,unclear,"Center in pasture near creek; bare triangular patch about 70m away, large tank battery/plant visible near road"
+AP01 01666,RUSK PRODUCTION INC.,WICHITA,A,CompletionWorkover,Active,2025-10-03,100.0,33.928082,-98.747844,A,,0,unclear,Center inside disturbed well-pad complex shared by cluster of nearby RUSK pits; pit shape unclear
+AP01 02598,"RAY HERRING OPERATING CO., LLC",YOUNG,A,CompletionWorkover,Active,2026-01-15,50.0,33.266719,-98.447211,A,,0,no,Scattered brush/trees at center; well pad w/ tanks ~150m E; rectangular tan pond ~190m SE
+AP01 02218,"RAY HERRING OPERATING CO., LLC",YOUNG,A,CompletionWorkover,Closed,2025-12-08,50.0,32.979966,-98.624629,A,,0,,
+AP01 02175,"RAY HERRING OPERATING CO., LLC",YOUNG,A,CompletionWorkover,Closed,2025-11-10,50.0,32.975718,-98.696791,A,,0,,
+AP01 00021,Olenox Corp.,WICHITA,A,CompletionWorkover,Closed,2025-07-08,50.0,33.89297,-98.833378,A,,0,,
+AP01 03045,"QUATRO OIL AND GAS, INC.",WICHITA,A,CompletionWorkover,Closed,2025-11-20,60.0,34.029686,-98.8909,A,,0,,
+AP01 04047,"QUATRO OIL AND GAS, INC.",WICHITA,A,CompletionWorkover,Closed,2026-03-30,160.0,33.888869,-98.832655,A,,0,,
+AP01 03709,"QUATRO OIL AND GAS, INC.",WICHITA,A,CompletionWorkover,Closed,2026-03-04,60.0,33.896044,-98.780735,A,,0,,
+AP01 01235,PETEX,JACK,A,MudCirculation,Active,2025-09-04,160.0,33.070612,-98.207603,A,,0,no,No pit or well infrastructure visible in chip; center at forest/pasture boundary along treeline; pond ~470m SW
+AP01 01234,PETEX,JACK,A,Reserve,Active,2025-09-04,160.0,33.070612,-98.207603,A,,0,no,No pit or well infrastructure visible in chip; center at forest/pasture boundary along treeline; pond ~470m SW
+AP01 01233,PETEX,JACK,A,MudCirculation,Active,2025-09-04,750.0,33.070612,-98.207603,A,,0,no,No pit or well infrastructure visible in chip; center at forest/pasture boundary along treeline; pond ~470m SW
+AP01 01232,PETEX,JACK,A,MudCirculation,Active,2025-09-04,160.0,33.070612,-98.207603,A,,0,no,No pit or well infrastructure visible in chip; center at forest/pasture boundary along treeline; pond ~470m SW
+AP01 01231,PETEX,JACK,A,MudCirculation,Active,2025-09-04,160.0,33.070612,-98.207603,A,,0,no,No pit or well infrastructure visible in chip; center at forest/pasture boundary along treeline; pond ~470m SW
+AP01 03838,NICHOLS OIL CO.,WICHITA,A,CompletionWorkover,Closed,2026-03-13,50.0,33.895468,-98.711857,A,,0,,
+AP01 00324,"LEWIS PETRO PROPERTIES, INC.",WEBB,A,Reserve,Active,2025-07-15,8000.0,27.847694,-99.632694,A,,0,unclear,"Rectangular pad/clearing at center, bare in esri, vegetated/overgrown in naip; access road adjoins; no liquid seen"
+AP01 00323,"LEWIS PETRO PROPERTIES, INC.",WEBB,A,Reserve,Active,2025-07-15,8000.0,27.847694,-99.632694,A,,0,unclear,"Rectangular pad/clearing at center, bare in esri, vegetated/overgrown in naip; access road adjoins; no liquid seen"
+AP01 04072,"LEWIS PETRO PROPERTIES, INC.",WEBB,A,Reserve,Active,2026-05-10,8000.0,27.668739,-99.668881,A,,0,no,Center in plowed/fallow farmland; no pit or oilfield infrastructure visible in chip; highway NE; dirt roads NW
+AP01 04071,"LEWIS PETRO PROPERTIES, INC.",WEBB,A,Reserve,Active,2026-05-10,8000.0,27.668739,-99.668881,A,,0,no,Center in plowed/fallow farmland; no pit or oilfield infrastructure visible in chip; highway NE; dirt roads NW
+AP01 01813,LARGE OPERATING LLC,GRAY,A,MudCirculation,Active,2025-10-14,26.0,35.557328,-101.028755,A,,0,no,"Open prairie pasture at center, no pit visible; meandering creek N; equipment/vehicle yard ~185m SE"
+AP01 00137,"JDL OPERATING, LLC",ARCHER,A,CompletionWorkover,Active,2025-07-14,75.0,33.678458,-98.538946,A,,0,no,Small equipment/vehicle mark at road curve near center in open pasture; no pit visible; creek+pond ~270m N
+AP01 00136,"JDL OPERATING, LLC",ARCHER,A,CompletionWorkover,Active,2025-07-14,75.0,33.678458,-98.538946,A,,0,no,Small equipment/vehicle mark at road curve near center in open pasture; no pit visible; creek+pond ~270m N
+AP01 01853,DIAMONDBACK E&P LLC,ECTOR,A,Reserve,Active,2025-10-15,125500.0,31.810532,-102.321409,AE,FLOODWAY,1,yes,Large lined reserve pit w/ dark liquid ~18m from center in esri; ~150m S in naip; active pad w/ multiple pits+equipment
+AP01 01852,DIAMONDBACK E&P LLC,ECTOR,A,Reserve,Active,2025-10-15,125500.0,31.810179,-102.318164,AE,,0,yes,"Same DIAMONDBACK reserve-pit/pad complex as AP01 01853 appears in this chip too; ~49m from center in esri (lined ponds), ~250m in naip (brush obscures)"
+AP01 01487,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2025-09-17,100.0,34.043316,-98.931732,A,,0,no,"Sand-mine-like disturbed trails/bare sandy patches around center, no defined pit; drainage NE corner; divided hwy N"
+AP01 01490,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2025-09-17,100.0,34.043262,-98.929853,A,,0,no,"Sand-mine-like disturbed trails at center, no defined pit; small building near hwy NE; divided hwy N"
+AP01 01494,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2025-09-30,100.0,34.05435,-98.637169,A,,0,no,"Dense mesquite brush at center, drainage channel through; olive-colored pond ~170m NW; cropland at W edge"
+AP01 03756,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2026-02-25,100.0,34.051454,-98.925167,A,,0,unclear,"Center in large active sand-mine excavation; darker ponded patches ~90m away, no defined pit at exact center; silo/loading structure N"
+AP01 03755,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2026-02-25,100.0,34.054686,-98.875808,A,,0,no,Center in active sand-mine excavation S of highway; large flooded quarry pond ~215m NW visible in esri only; no pit at exact center
+AP01 05018,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2026-04-15,100.0,34.050772,-98.878141,A,,0,no,Center in sand-mine excavation w/ oval tree island + haul-road loop nearby; small pond ~155m S; esri notably more revegetated than naip
+AP01 05133,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2026-05-28,100.0,34.050772,-98.878141,A,,0,no,Center in sand-mine excavation w/ oval tree island + haul-road loop nearby; small pond ~155m S; esri notably more revegetated than naip
+AP01 00734,"Dara Operating Company, LLC",WICHITA,A,FreshMiningWater,Active,2025-08-11,100.0,34.053143,-98.875915,A,,0,no,Center on boundary of sand-mine excavation/brush edge near N-S road/pipeline corridor; well-pad cluster w/ tanks ~200m SE; no defined pit at center
+AP01 01751,Blackflat Oil Company LLC,ARCHER,A,CompletionWorkover,Active,2025-10-08,30.0,33.77767,-98.64581,A,,0,no,"Open pasture at center, no infrastructure or pit visible; farm pond ~185m SW; paved road curves through NW"
+AP01 03120,"Paloma Operating, LLC",JACKSON,A,MudCirculation,Closed,2025-01-04,2493.0,28.901664,-96.652468,AE,,0,,
+AP01 03119,"Paloma Operating, LLC",JACKSON,A,Reserve,Closed,2025-01-04,720.0,28.901664,-96.652468,AE,,0,,
+AP01 02612,"Paloma Operating, LLC",FORT BEND,A,MudCirculation,Closed,2026-01-15,2493.0,29.4557,-95.5954,AE,,0,,
+AP01 02611,"Paloma Operating, LLC",FORT BEND,A,Reserve,Closed,2026-01-15,720.0,29.4557,-95.5954,AE,,0,,
+AP01 03383,BAY ROCK OPERATING COMPANY,YOUNG,A,CompletionWorkover,Closed,2026-02-10,85.0,33.326616,-98.460859,A,,0,,
+AP01 03382,BAY ROCK OPERATING COMPANY,YOUNG,A,CompletionWorkover,Closed,2026-02-10,85.0,33.337799,-98.501438,A,,0,,
+AP01 03987,DIAMONDBACK E&P LLC,ECTOR,A,Reserve,Active,2026-04-01,125000.0,31.811981,-102.324505,AE,,0,no,"Dense brush at center; bare pad w/ equipment ~110m SE, no visible pit; dry wash/drainage SW"
+AP01 02163,"DENBURY ONSHORE, LLC",CHAMBERS,A,WaterCondensate,Active,2025-10-27,620.0,29.69224,-94.505967,AE,,0,no,"Center at large tank battery/compressor complex; teal lined pond ~145m W, brown lined pond ~250m E; heavy industrial site"
+AP01 02162,"DENBURY ONSHORE, LLC",BRAZORIA,A,WaterCondensate,Active,2025-10-27,620.0,29.500678,-95.262769,AE,,0,no,"Center at large tank battery/compressor complex, no lined pond visible in this chip; paved road N; mixed grass/trees around"
+AP01 03362,BRIDWELL OIL CO.,ARCHER,A,CompletionWorkover,Closed,2026-02-09,450.0,33.672663,-98.675559,A,,0,,
+AP01 01333,BORDERLINE OPERATING CORP.,ARCHER,A,CompletionWorkover,Closed,2025-09-10,990.0,33.443851,-98.597543,A,,0,,
+AP01 03185,BORDERLINE OPERATING CORP.,ARCHER,A,Reserve,Active,2025-12-31,990.0,33.425844,-98.610214,A,,0,no,Center on cleared pipeline/transmission right-of-way through forest; no pit visible in chip; muddy pond ~280m NW
+AP01 03186,BORDERLINE OPERATING CORP.,ARCHER,A,Reserve,Active,2025-12-31,990.0,33.427296,-98.606165,A,,0,yes,Small tan/oval pit ~40m from center amid brush; farm pond ~110m N; creek visible E; no equipment visible
+AP01 00851,BORDERLINE OPERATING CORP.,ARCHER,A,Reserve,Active,2025-08-14,990.0,33.447677,-98.596327,A,,0,no,"Open scrub pasture at center, no infrastructure or pit visible; muddy pond ~200m E; road at top"
+AP01 00831,BORDERLINE OPERATING CORP.,ARCHER,A,Reserve,Closed,2025-08-14,990.0,33.447677,-98.596327,A,,0,,
+AP01 02197,AURORA RESOURCES CORPORATION,SAN PATRICIO,A,Reserve,Closed,2025-11-10,5000.0,27.934199,-97.726929,AE,,0,,
+AP02 00258,"Denbury Onshore, LLC",Brazoria,B,ProducedWaterRecycling,Active,2026-04-24,36714.0,29.505528,-95.265944,AE,,0,yes,Distinct dark lined produced-water pit w/ wellhead cluster essentially at center (~50m); large-capacity site; roads converge
+AP02 00260,"Denbury Onshore, LLC",Brazoria,B,ProducedWaterRecycling,Active,2026-04-24,41688.0,29.482528,-95.243,AE,,0,yes,"Lined produced-water pit w/ wellhead adjacent, ~46m from center; drainage ditch crosses N part of chip; houses/farms nearby"

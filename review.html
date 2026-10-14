@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texas waste pits: floodplain, drinking water, aquifers</title>
+<style>
+  :root { --fg:#1d1d1f; --muted:#5b5b60; --rule:#d8d8dc; --bg:#fff; --card:#f5f5f7; --accent:#9a2a12; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#ececee; --muted:#a2a2a8; --rule:#3a3a3f; --bg:#161618; --card:#202024; --accent:#ff9a7a; } }
+  html { background: var(--bg); }
+  body { margin:0; color:var(--fg); font:16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 28px 16px 64px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 6px; }
+  h2 { font-size: 21px; margin: 44px 0 6px; padding-top: 18px; border-top: 1px solid var(--rule); }
+  h3 { font-size: 16px; margin: 22px 0 4px; }
+  .by { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+  .num { display:flex; flex-wrap:wrap; gap:10px; margin: 14px 0; }
+  .num div { background: var(--card); border-radius: 8px; padding: 10px 14px; flex: 1 1 150px; }
+  .num b { display:block; font-size: 24px; line-height:1.15; color: var(--accent); }
+  .num span { font-size: 13px; color: var(--muted); }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 10px 0; }
+  th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  td.r, th.r { text-align: right; font-variant-numeric: tabular-nums; }
+  iframe { width: 100%; height: 520px; border: 1px solid var(--rule); border-radius: 8px; margin: 10px 0 2px; background: var(--card); }
+  .cap { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .box { background: var(--card); border-radius: 8px; padding: 12px 16px; margin: 14px 0; }
+  .box p { margin: 6px 0; }
+  a { color: var(--accent); }
+  code { font-size: 13px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  @media (max-width: 600px) { iframe { height: 420px; } h1 { font-size: 23px; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Texas waste pits near floodplains, drinking water and aquifers</h1>
+<div class="by">Saul Elbein and Greg Randall, Future Heist. Draft for outside review, 2026-10-14. Not for citation.</div>
+
+<p>The Railroad Commission of Texas opened a registry for oil and gas waste pits under 16 TAC Chapter 4 in July 2025. Operators register a pit by filling out Form EP-1, and the Commission does not review the entries. Future Heist obtained the registry through an open-records request: 6,943 pits registered between July 1, 2025 and August 31, 2026. This page tests where those pits sit against three public layers: FEMA's 100-year floodplain, the Texas Commission on Environmental Quality's public water system wells and intakes, and the Texas Water Development Board's aquifer boundaries.</p>
+
+<div class="box">
+  <p><b>What these numbers are.</b> Every count below comes from joining the operator's own latitude and longitude to a public map layer. A pit that falls inside a layer is a place to look, not a proven violation. Coordinates are operator-entered and sometimes land on a highway, a cemetery or a river sandbar; the floodplain section says how often.</p>
+  <p><b>What would help most from a reviewer.</b> Whether the coordinates look right where you know the ground, and whether the 500-foot and 100-year-floodplain tests below are being read the way the rule reads them.</p>
+</div>
+
+<h2 id="flood">1. Pits inside the 100-year floodplain</h2>
+<p>Section 4.113 requires an authorized pit to be built and operated outside a 100-year floodplain. FEMA's Special Flood Hazard Area is the mapped 1-percent-annual-chance floodplain.</p>
+
+<div class="num">
+  <div><b>260</b><span>pits inside a Special Flood Hazard Area (233 Zone A, 27 Zone AE)</span></div>
+  <div><b>148</b><span>of those still Active at export</span></div>
+  <div><b>13.9M bbl</b><span>registered capacity of the 260</span></div>
+  <div><b>4,344</b><span>pits outside every FEMA polygon: unmapped, not cleared</span></div>
+</div>
+
+<iframe loading="lazy" title="Map of pits inside the FEMA 100-year floodplain" src="index.html?embed=1&flags=flag_in_sfha&status=Active&view=32.2,-99.0,6"></iframe>
+<p class="cap">Active pits inside a Special Flood Hazard Area. Dot size is registered capacity. Click a dot for its record. <a href="index.html?flags=flag_in_sfha">Open the full map with filters</a>.</p>
+
+<p>The pits cluster in North Texas river bottoms and on the Rio Grande and Nueces floodplains. Wichita County holds 111, Archer 30, Young 19, Webb 15 and Ector 14. R2Q Operating registered 84 of the 260, and the Wichita Falls district office, which keyed paper forms for small operators, 24. Most are small completion and workover pits: 154 are completion or workover pits and another 22 are 30-day completion or workover pits. Two are produced-water recycling pits (Denbury, Brazoria County, about 37,000 and 42,000 bbl).</p>
+
+<h3>Satellite check of the 148 Active floodplain pits</h3>
+<p>Each of the 148 was checked against 2024 NAIP and Esri imagery at its coordinate. The coordinate shows a pit for 29, is unclear for 18, and shows no pit for 101 (Esri imagery; NAIP agrees within a few pits). For 52 of the 148 the image shows no oil and gas activity at all: the coordinate sits on farmland, a road or a river bar. The 29 visible pits include Caturus Energy (about 1.58 million bbl, Webb County), Ensign Natural Resources and Burlington Resources (about 1 million bbl each, De Witt County), Marathon Oil (about 650,000 bbl, Karnes County) and six SM Energy pits in Webb County. The imagery reading is a vision-model pass, not a person; a human has not yet looked at the 29.</p>
+
+<h3>Caveats</h3>
+<ul>
+  <li>Zone A is FEMA's approximate zone, drawn without a base flood elevation. 233 of the 260 are Zone A.</li>
+  <li>200 of the 260 are rows the Commission bulk-loaded in July 2026 from paper filings, and 32 sit at a coordinate shared by three or more pits. Those are the rows most likely to carry a lease centroid instead of the pit's location.</li>
+  <li>The registry has no floodplain field. Whether a given pit is in the floodplain is a fact the Commission would hold only in an inspection record, which are not part of this export.</li>
+</ul>
+<p>Download: <a href="data/review/floodplain_pits.csv">floodplain_pits.csv</a> (260 rows, with imagery verdict and notes).</p>
+
+<h2 id="water">2. Pits near public drinking water wells and intakes</h2>
+<p>Section 4.115(f)(3) bars a <em>produced-water recycling</em> pit (Schedule B, registration numbers beginning AP02) within 500 feet of a public water system well or intake. The rule applies to Schedule B only; the 6,528 Schedule A pits (reserve, completion and workover, mud and similar pits) have no drinking-water setback in the Commission's pit rules. The check uses TCEQ's public water system layers: 26,134 wells (all statuses) and 561 surface-water intakes. A public water system serves at least 25 people or 15 connections.</p>
+
+<div class="num">
+  <div><b>0 of 415</b><span>Schedule B pits within 500 ft of a public water system well or intake</span></div>
+  <div><b>647 ft</b><span>closest Schedule B pit (Oxy, Ector County) to an inactive industrial well</span></div>
+  <div><b>17</b><span>Schedule B pits within 1 mile</span></div>
+  <div><b>5</b><span>Schedule A pits within 500 ft (rule does not cover them)</span></div>
+</div>
+
+<iframe loading="lazy" title="Map of pits within one mile of a public water system well or intake" src="index.html?embed=1&flags=flag_pws_within_1mi&view=31.6,-101.0,6"></iframe>
+<p class="cap">All 298 pits within 1 mile of a public water system well or intake. <a href="index.html?flags=flag_pws_within_500ft">Open the full map at the 500-ft cut</a>.</p>
+
+<h3>The five Schedule A pits within 500 feet</h3>
+<table>
+  <tr><th>Pit</th><th>Operator</th><th>County</th><th class="r">Capacity (bbl)</th><th class="r">Distance</th><th>Water system</th></tr>
+  <tr><td>AP01 01525</td><td>Midland district office</td><td>Loving</td><td class="r">188</td><td class="r">266 ft</td><td>Loving County Water System</td></tr>
+  <tr><td>AP01 02689</td><td>Continental Resources</td><td>Ector</td><td class="r">50,420</td><td class="r">349 ft</td><td>Huntsman Polymers</td></tr>
+  <tr><td>AP01 02688</td><td>Continental Resources</td><td>Ector</td><td class="r">53,490</td><td class="r">359 ft</td><td>Huntsman Polymers</td></tr>
+  <tr><td>AP01 00041</td><td>D-J's Well Service &amp; Roust</td><td>Hutchinson</td><td class="r">80</td><td class="r">451 ft</td><td>Borger Municipal Water System</td></tr>
+  <tr><td>AP01 01121</td><td>Continental Resources</td><td>Ector</td><td class="r">57,945</td><td class="r">472 ft</td><td>Huntsman Polymers</td></tr>
+</table>
+<p>These five are context, not rule violations. Three are Continental pits of about 50,000 bbl each near a Huntsman Polymers well; the Borger and Loving County systems are municipal.</p>
+
+<h3>Caveats</h3>
+<ul>
+  <li>TCEQ's coordinates are not on one datum. 3,034 wells are labeled NAD27, and their coordinates sit a median 41 meters from the Water Development Board's for the same wells, shifted about 25 meters east. The closest Schedule B near-miss (647 ft) carries a NAD27 label and a stated accuracy of 1,500 meters, so it could be nearer or farther than the figure.</li>
+  <li>The layer holds public systems only. It does not hold private domestic or irrigation wells, which §4.115(f)(4) protects within 300 feet of a Schedule B pit. That test has not been run; the Water Development Board's driller reports are the data, and their coordinates are unverified.</li>
+  <li>TCEQ describes intake locations as approximate, and its layer covers public systems only, not industrial or agricultural diversions.</li>
+</ul>
+<p>Download: <a href="data/review/drinking_water_within_1mi.csv">drinking_water_within_1mi.csv</a> (298 rows, nearest system and distance).</p>
+
+<h2 id="aquifer">3. Pits over aquifers</h2>
+<p>Each pit was tested against the Water Development Board's nine major aquifers and its minor aquifers. This is a first run; the layer was joined for this page on 2026-10-14 and nobody else has reviewed it.</p>
+
+<div class="num">
+  <div><b>4,602</b><span>pits over a major aquifer (3,771 of them Active)</span></div>
+  <div><b>6,657</b><span>pits over a major or minor aquifer (96%)</span></div>
+  <div><b>277</b><span>over neither layer (102 of them within a mile of an aquifer)</span></div>
+  <div><b>702 of 841</b><span>of the 841 mapped pits that report water within 50 ft of the pit floor sit over a major aquifer</span></div>
+</div>
+
+<table>
+  <tr><th>Major aquifer</th><th class="r">Pits over it</th></tr>
+  <tr><td>Edwards-Trinity</td><td class="r">1,652</td></tr>
+  <tr><td>Ogallala</td><td class="r">1,353</td></tr>
+  <tr><td>Pecos Valley</td><td class="r">801</td></tr>
+  <tr><td>Carrizo</td><td class="r">562</td></tr>
+  <tr><td>Gulf Coast</td><td class="r">379</td></tr>
+  <tr><td>Seymour</td><td class="r">323</td></tr>
+  <tr><td>Trinity</td><td class="r">104</td></tr>
+</table>
+<p>Cross Timbers (2,020 pits), Dockum (948), Rustler (491) and Yegua-Jackson (202) lead the minor list. A pit over two overlapping aquifers counts in both rows.</p>
+
+<iframe loading="lazy" title="Map of Active pits over a major aquifer, with aquifer outlines" src="index.html?embed=1&flags=flag_over_major&status=Active&aquifers=1&view=31.3,-100.8,6"></iframe>
+<p class="cap">Active pits over a TWDB major aquifer, with the aquifer outlines in green. <a href="index.html?flags=flag_over_major&aquifers=1">Open the full map with filters</a>.</p>
+
+<h3>What this layer can and cannot say</h3>
+<ul>
+  <li>The join is close to saturated. The pits are in the Permian, the Eagle Ford and North Texas, and the aquifer maps cover most of that ground, so "over an aquifer" separates few pits from the rest. The useful cut is which aquifer.</li>
+  <li>Ogallala, Edwards-Trinity and Carrizo carry large fresh-water supplies. The Rustler, Dockum and parts of the Pecos Valley hold water that is brackish or saline in much of the Permian Basin. Being over one of those says little about drinking water.</li>
+  <li>The polygon marks where the Board mapped an aquifer, including where younger rock covers it. It does not say how deep the water is or whether the pit leaks.</li>
+</ul>
+
+<h3>The sharper aquifer question: the depth operators report</h3>
+<p>The depth-to-groundwater number on Form EP-1 decides whether a pit needs a liner (water within 50 ft of the pit floor). We compared it with the Water Development Board's own well measurements within 3 miles of each pit.</p>
+<ul>
+  <li>842 registrations report groundwater within 50 ft of the pit floor, by their own number, holding about 207.6 million bbl of capacity. A liner is required for each.</li>
+  <li>927 pits report groundwater deep enough to escape the liner trigger while the median of nearby state wells puts it within 50 ft. 230 of those rest on three or more wells measured since 2015, and 76 on wells that are all within 50 ft. Example: a Fasken produced-water pit in Andrews County (about 1.04 million bbl) reports groundwater at 1,185 ft; four state wells measured in 2025 put it at 49 to 56 ft.</li>
+  <li>182 pits report water at exactly 1 ft. For the 105 with a state well within 3 miles, 104 sit where the state's wells put water far deeper, so the 1-ft entries look like placeholders.</li>
+  <li>Imagery on 127 of these pits found 25 with a visible pit, and 20 of those 25 are lined regardless of the number reported. The unlined ones were small North Texas completion pits.</li>
+</ul>
+<p>A nearby-well median is a proxy, not a measurement at the pit, and the Board's wells and the pit may draw on different aquifers. The EP-1 form has no liner field, so whether a pit is actually lined is an inspection-record question.</p>
+
+<h2 id="sources">Sources and method</h2>
+<table>
+  <tr><th>Layer</th><th>Source</th></tr>
+  <tr><td>Pits</td><td>RRC open-records export <code>20260901_ORR_AuthPitAB_20250701to20260831.xlsx</code>, sha256 <code>c05a347f9fdc429aae45212774ef8faa7c2094f51d874fd228d090b26a8c6806</code>. Status, dimensions, coordinates and groundwater depth are operator-entered.</td></tr>
+  <tr><td>Floodplain</td><td>FEMA National Flood Hazard Layer, Texas statewide, release 2025-09-01, layer S_FLD_HAZ_AR (197,346 polygons). Point-in-polygon; an overlapping Special Flood Hazard Area wins.</td></tr>
+  <tr><td>Drinking water</td><td>TCEQ Public Water System wells and surface intakes (MapServer layers 2 and 1), retrieved 2026-09-25. Distances in Texas Centric Albers (EPSG:3083).</td></tr>
+  <tr><td>Aquifers</td><td>TWDB <code>major_aquifers.zip</code> (sha256 <code>6b7bb13a…</code>) and <code>minor_aquifers.zip</code> (sha256 <code>2c75e522…</code>) from twdb.texas.gov/mapping/gisdata.asp, retrieved 2026-10-14. Point-in-polygon in EPSG:3083; "within 1 mile" is nearest polygon edge.</td></tr>
+  <tr><td>Groundwater depth</td><td>TWDB Groundwater Database wells within 3 miles of each pit, latest publishable depth to water since 1990.</td></tr>
+</table>
+<p>Every count on this page comes from a script, not a hand count. The full pit map is at <a href="index.html">the main map</a>, where each flag is a filter. The full dataset, the scripts and the method notes are in a private repository, shared on request.</p>
+
+</main>
+</body>
+</html>

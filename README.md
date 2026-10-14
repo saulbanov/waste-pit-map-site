@@ -4,6 +4,8 @@ Interactive map of the 6,943 oil and gas waste pits registered with the Railroad
 
 **Live map:** https://saulbanov.github.io/waste-pit-map-site/
 
+**Review page (floodplain, drinking water, aquifers):** https://saulbanov.github.io/waste-pit-map-site/review.html
+
 By Saul Elbein and Greg Randall, Future Heist.
 
 ## What the map shows
@@ -23,8 +25,11 @@ index.html                 the map (Leaflet, loaded from cdnjs)
 data/pits.geojson          one point per pit with all computed flags
 data/tx_counties.geojson   Census county polygons, simplified
 data/county.summary.csv    per-county counts and overlays
+data/major_aquifers.geojson  TWDB major aquifer outlines, simplified for display
+data/review/*.csv          the floodplain and drinking-water lists behind review.html
+review.html                findings page with embedded, pre-filtered maps
 ```
 
 ## Editing
 
-This is a publishing copy. The source of record is the private repo `saulbanov/waste-pit-map` (`map/index.html` and `data/views/`). Edit there and re-copy; the only change in this copy is the data path (`data/` instead of `../data/views/`) and the credit line.
+This is a publishing copy. The source of record is the private repo `saulbanov/waste-pit-map` (`map/index.html` and `data/views/`). Edit there and re-copy; this copy differs by the data path (`data/` instead of `../data/views/`), the credit line, the aquifer and drinking-water layers and URL parameters (`?flags=…&status=…&embed=1`) added 2026-10-14, and the absence of the private H6 new-well leads layer, which stays out of the public site.

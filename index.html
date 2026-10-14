@@ -87,6 +87,13 @@
   <h2>H2 FEMA floodplain (NFHL 2025-09)</h2>
   <label><input type="checkbox" class="f-flag" value="flag_in_sfha"> H2 inside a Special Flood Hazard Area, 100-yr floodplain (260)</label>
   <label><input type="checkbox" class="f-flag" value="flag_in_floodway"> H2 inside a regulatory floodway (4)</label>
+  <h2>Drinking-water proximity (TCEQ public water system wells and surface intakes)</h2>
+  <label><input type="checkbox" class="f-flag" value="flag_pws_within_500ft"> within 500 ft of a public water system well or intake (5, all Schedule A; the §4.115(f)(3) ban covers Schedule B only)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_pws_within_1mi"> within 1 mile of a public water system well or intake (298)</label>
+  <h2>Aquifers (TWDB polygons; presence of an aquifer, not water quality)</h2>
+  <label><input type="checkbox" class="f-flag" value="flag_over_major"> over a TWDB major aquifer (4,602)</label>
+  <label><input type="checkbox" class="f-flag" value="flag_over_any_aquifer"> over a major or minor aquifer (6,657)</label>
+  <label><input type="checkbox" id="aquifer-toggle"> Show major aquifer outlines</label>
   <h2>Imagery check (NAIP 2024 + Esri; SFHA-Active and H1-strict lists only)</h2>
   <label><input type="checkbox" class="f-flag" value="flag_img_pit_visible"> pit visible at the coordinate</label>
   <label><input type="checkbox" class="f-flag" value="flag_img_visible_no_liner"> pit visible, no liner seen</label>
@@ -162,7 +169,11 @@ const FLAG_LABELS = {
   flag_gw_placeholder: "TWDB: reported 1 ft, state wells deeper (placeholder)",
   flag_twdb_trigger_undeclared: "TWDB: liner trigger undeclared, state wells say it applies",
   flag_twdb_trigger_robust: "TWDB: same, 3+ wells since 2015",
-  flag_twdb_trigger_strict: "TWDB: same, every nearby well within 50 ft"
+  flag_twdb_trigger_strict: "TWDB: same, every nearby well within 50 ft",
+  flag_pws_within_500ft: "Within 500 ft of a public water system well or intake",
+  flag_pws_within_1mi: "Within 1 mile of a public water system well or intake",
+  flag_over_major: "Over a TWDB major aquifer",
+  flag_over_any_aquifer: "Over a TWDB major or minor aquifer"
 };
 
 // 7-class quantile color ramp (light yellow -> dark red), shared by every choropleth metric.
@@ -213,7 +224,7 @@ function popupHtml(props) {
     "schedule","pit_type_primary","pit_types","status","effective_date","closure_date",
     "capacity_bbl","depth_ft","groundwater_depth_ft","gw_minus_depth","bulk_loaded",
     "twdb_n_wells_3mi","twdb_median_dtw_ft","twdb_max_dtw_ft","twdb_latest_year","twdb_verdict",
-    "fema_mapped","fld_zone","zone_subty","h3_operator","h3_operator_p5","h3_join",
+    "fema_mapped","fld_zone","zone_subty","major_aquifer_over","minor_aquifer_over","pws_nearest_ft","pws_nearest_system","h3_operator","h3_operator_p5","h3_join",
     "img_set","img_pit_visible","img_liner_visible","img_center_esri","img_notes"];
   for (const k of order) {
     rows.push(`<tr><td class="k">${escapeHtml(k)}</td><td>${escapeHtml(props[k] ?? "")}</td></tr>`);
@@ -407,6 +418,39 @@ function renderBarnett() {
   barnettLayer.bringToFront();
 }
 
+let aquiferLayer = null;
+async function renderAquifers() {
+  if (aquiferLayer) { map.removeLayer(aquiferLayer); aquiferLayer = null; }
+  if (!document.getElementById('aquifer-toggle').checked) return;
+  const gj = await (await fetch('data/major_aquifers.geojson')).json();
+  aquiferLayer = L.geoJSON(gj, {
+    style: { color: '#1b7837', weight: 1.5, fillColor: '#5aae61', fillOpacity: 0.18 },
+    onEachFeature: (f, l) => l.bindTooltip(f.properties.name + ' aquifer (TWDB major)', { sticky: true })
+  }).addTo(map);
+  aquiferLayer.bringToBack();
+}
+
+// Deep links used by review.html: ?flags=a,b&status=Active&schedule=B&aquifers=1&view=lat,lon,zoom&embed=1 (embed hides the filter panel)
+function applyUrlParams() {
+  const q = new URLSearchParams(location.search);
+  if (q.has('flags')) {
+    const want = q.get('flags').split(',');
+    document.querySelectorAll('.f-flag').forEach(el => { el.checked = want.includes(el.value); });
+  }
+  if (q.has('status')) {
+    const want = q.get('status').split(',');
+    document.querySelectorAll('.f-status').forEach(el => { el.checked = want.includes(el.value); });
+  }
+  if (q.has('schedule')) {
+    const want = q.get('schedule').split(',');
+    document.querySelectorAll('.f-schedule').forEach(el => { el.checked = want.includes(el.value); });
+  }
+  if (q.get('aquifers') === '1') { document.getElementById('aquifer-toggle').checked = true; renderAquifers(); }
+  if (q.get('embed') === '1') { document.getElementById('panel').style.display = 'none'; }
+  if (q.has('view')) { const [la, lo, z] = q.get('view').split(',').map(Number); map.setView([la, lo], z); }
+  renderPits();
+}
+
 function buildLegend() {
   const el = document.getElementById('legend');
   for (const [type, color] of Object.entries(PIT_TYPE_COLORS)) {
@@ -458,6 +502,8 @@ async function init() {
   document.getElementById('choropleth-toggle').addEventListener('change', renderChoropleth);
   document.getElementById('choropleth-metric').addEventListener('change', renderChoropleth);
   document.getElementById('barnett-toggle').addEventListener('change', renderBarnett);
+  document.getElementById('aquifer-toggle').addEventListener('change', renderAquifers);
+  applyUrlParams();
 }
 
 init().catch(err => {
